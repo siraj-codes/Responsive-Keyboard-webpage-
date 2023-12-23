@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Keyboards</title>
+  <style>
+    /* Add modern and responsive styles here */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    header {
+      background-color: #4CAF50;
+      padding: 15px;
+      text-align: center;
+      color: white;
+      font-size: 2em;
+      text-shadow: 2px 2px 4px #000000;
+    }
+
+    .navbar {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .navbar-logo {
+      font-weight: bold;
+      font-size: 1.5em;
+      font-family: 'Verdana', sans-serif;
+    }
+
+    .nav-links {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+    }
+
+    .nav-links li {
+      margin-right: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s;
+      font-family: 'Tahoma', sans-serif;
+    }
+
+    .nav-links a:hover {
+      color: lightgray;
+    }
+
+    @media (max-width: 600px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    section {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #d3d3d3; /* changed to light grey for better contrast */
+      padding: 20px;
+    }
+
+    .keyboard-img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      box-shadow: 5px 5px 5px #888888;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      font-size: 0.8em;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .theme-switch {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .theme-switch button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+
+    .theme-switch button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    About Keyboards
+  </header>
+  <nav class="navbar" id="navbar">
+    <div class="navbar-logo">Keyboards 101</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Types</a></li>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <div class="container">
+      <h2 style="text-align: center; color: #4CAF50;">Introduction to Keyboards</h2>
+      <p>Keyboards are a crucial input device for computers. They come in various types such as mechanical, membrane,
+        and ergonomic keyboards. The design and features of keyboards have evolved over time to provide a better typing
+        experience.</p>
+      <img class="keyboard-img" src="key.webp" alt="Modern Keyboard" height="300px" width="300px">
+    </div>
+  </section>
+
+  <div class="theme-switch">
+    <button id="toggle-theme">Switch Theme</button>
+  </div>
+
+  <footer>
+    <p>© 2023 Keyboards 101 | Designed by YourName</p>
+  </footer>
+
+  <script>
+    const themeSwitchBtn = document.getElementById('toggle-theme');
+    let darkMode = false;
+
+    themeSwitchBtn.addEventListener('click', () => {
+      darkMode = !darkMode;
+
+      if (darkMode) {
+        document.body.style.backgroundColor = '#333';
+      } else {
+        document.body.style.backgroundColor = '#f2f2f2';
+      }
+    });
+
+  </script>
+</body>
+
+</html>
